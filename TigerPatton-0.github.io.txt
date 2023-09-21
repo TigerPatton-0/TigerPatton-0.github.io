@@ -1,0 +1,113 @@
+Last login: Tue Sep 19 11:13:37 on ttys000
+c27tp@C27TP-FVFHT8JGQ6L4 ~ % cd ./desktop/TigerPatton-0.github.io 
+c27tp@C27TP-FVFHT8JGQ6L4 TigerPatton-0.github.io % git status
+fatal: not a git repository (or any of the parent directories): .git
+c27tp@C27TP-FVFHT8JGQ6L4 TigerPatton-0.github.io % echo "# TigerPatton-0.github.io" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/TigerPatton-0/TigerPatton-0.github.io.git
+git push -u origin main
+Initialized empty Git repository in /Users/c27tp/Desktop/TigerPatton-0.github.io/.git/
+[main (root-commit) 58f8a0a] first commit
+ Committer: Tiger Patton <c27tp@c27tp-fvfht8jgq6l4.dalton.org>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+Username for 'https://github.com': TigerPatton-o
+Password for 'https://TigerPatton-o@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/TigerPatton-0/TigerPatton-0.github.io.git/'
+c27tp@C27TP-FVFHT8JGQ6L4 TigerPatton-0.github.io % echo "# TigerPatton-0.github.io" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/TigerPatton-0/TigerPatton-0.github.io.git
+git push -u origin main
+Reinitialized existing Git repository in /Users/c27tp/Desktop/TigerPatton-0.github.io/.git/
+[main d831fed] first commit
+ Committer: Tiger Patton <c27tp@c27tp-fvfht8jgq6l4.dalton.org>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+error: remote origin already exists.
+Username for 'https://github.com': TigerPatton-0
+Password for 'https://TigerPatton-0@github.com': 
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 444 bytes | 444.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+
+To https://github.com/TigerPatton-0/TigerPatton-0.github.io.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+c27tp@C27TP-FVFHT8JGQ6L4 TigerPatton-0.github.io % 
+c27tp@C27TP-FVFHT8JGQ6L4 TigerPatton-0.github.io % git add .
+c27tp@C27TP-FVFHT8JGQ6L4 TigerPatton-0.github.io % git commit -m "adding my website"
+[main 724b571] adding my website
+ Committer: Tiger Patton <c27tp@c27tp-fvfht8jgq6l4.dalton.org>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 5 files changed, 76 insertions(+)
+ create mode 100644 .DS_Store
+ create mode 100644 index.html
+ create mode 100644 journal.html
+ create mode 100644 projects.html
+ create mode 100644 square.html
+c27tp@C27TP-FVFHT8JGQ6L4 TigerPatton-0.github.io % git push
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 1.29 KiB | 1.29 MiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/TigerPatton-0/TigerPatton-0.github.io.git
+   d831fed..724b571  main -> main
+c27tp@C27TP-FVFHT8JGQ6L4 TigerPatton-0.github.io % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .DS_Store
+
+no changes added to commit (use "git add" and/or "git commit -a")
+c27tp@C27TP-FVFHT8JGQ6L4 TigerPatton-0.github.io %  
