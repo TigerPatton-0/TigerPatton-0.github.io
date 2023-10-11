@@ -1,27 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Raleway&display=swap" rel="stylesheet">
+
+animation
 
 <style type="text/css">
 	body{
 		font-family: 'Pixelify Sans', cursive;
 		font-size:20px;
 	}
+
+	#box-one{
+		width:100px;
+		height:100px;
+		background-color:palegoldenrod;
+		animation-name:action-one;
+		animation-duration:3s;
+		animation-iteration-count:1;
+	}
+	@keyframes action-one{
+		0%{
+		width:1000px;
+		height:1000px;
+		background-color:white;
+		}
+		100%{
+		width:100px;
+		height:100px;
+		background-color:palegoldenrod;
+		}
+	}
+
 </style>
 
 </head>
 <body>
 
-<h1>tiger's projects.</h1>
-<a href="animation1.html">
-<p>first project:</p>
-</a>
-
-<p>second project:</p>
+<div id="box-one"></div>
 
 </body>
 </html>
