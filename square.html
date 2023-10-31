@@ -5,18 +5,51 @@
 <head>
 
 <style type="text/css">
-	#tiger{
-		width:500px;
-		height:500px;
-		background-color:lightgoldenrodyellow;
+	.box{
+		display:inline-block;
+		transition:.25s;
+		width:200px;
+		height:200px;
+		background-color:black;
 	}
+
+	#redbox:hover{
+		transition:.25s;
+		background-color:red;
+	}
+	#orangebox:hover{
+		transition:.25s;
+		background-color:orange;
+	}
+	#yellowbox:hover{
+		transition:.25s;
+		background-color:yellow;
+	}
+	#greenbox:hover{
+		transition:.25s;
+		background-color:aquamarine;
+	}
+	#bluebox:hover{
+		transition:.25s;
+		background-color:royalblue;
+	}
+	#purplebox:hover{
+		transition:.25s;
+		background-color:rebeccapurple;
+	}
+
 </style>
 
 </head>
 
 <body>
 
-	<div id="tiger"></div>
+	<div id="redbox" class="box"></div>
+	<div id="orangebox" class="box"></div>
+	<div id="yellowbox" class="box"></div>
+	<div id="greenbox" class="box"></div>
+	<div id="bluebox" class="box"></div>
+	<div id="purplebox" class="box"></div>
 
 </body>
 

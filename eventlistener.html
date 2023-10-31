@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		#object{
+			height:100px;
+			width:100px;
+			background-color:red;
+			top:500px;
+			position:absolute;
+			transition:1s;
+		}
+
+	</style>
+
+</head>
+<body>
+
+<div id="object"></div>
+
+	<script type="text/javascript">
+		var object = document.getElementById("object");
+		object.style.top="500px"
+
+		object.addEventListener("click", function(){
+			console.log("hi")
+
+			if(object.style.top = "200px") {
+				object.style.top = "500px";
+			}
+
+			else if (object.style.top = "500px"){
+			object.style.top = "200px";
+			}
+		})
+
+	</script>
+
+</body>
+</html>

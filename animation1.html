@@ -15,9 +15,17 @@ animation
 	}
 
 	#box-one{
-		width:100px;
-		height:100px;
-		background-color:palegoldenrod;
+		width:1000px;
+		height:20px;
+		background-color:skyblue;
+		animation-name:action-one;
+		animation-duration:3s;
+		animation-iteration-count:1;
+	}
+	#box-two{
+		width:1000px;
+		height:20px;
+		background-color:red;
 		animation-name:action-one;
 		animation-duration:3s;
 		animation-iteration-count:1;
@@ -25,7 +33,7 @@ animation
 	@keyframes action-one{
 		0%{
 		width:1000px;
-		height:1000px;
+		height:100px;
 		background-color:white;
 		}
 		100%{
@@ -41,6 +49,7 @@ animation
 <body>
 
 <div id="box-one"></div>
+<div id="box-two"></div>
 
 </body>
 </html>

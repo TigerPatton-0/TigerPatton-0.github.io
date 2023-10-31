@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<style type="text/css">
+	body{
+		margin:0px;
+	}
+
+	#startDiv{
+		width:100px;
+		height:100px;
+		background-color:green;
+		z-index:10;
+		position:absolute;
+
+
+	}
+
+	#bigDiv{
+		width:100%;
+		height:100%;
+		background-color:darkred;
+		z-index:-10;
+		position:absolute;
+		top:0%;
+
+	}
+
+	#hallway1{
+		width:100px;
+		height:10px;
+		background-color:green;
+		z-index:10;
+		top:0px;
+		left:0px;
+		transform:rotate(0deg);
+		opacity:0;
+		position:absolute;
+	}
+
+	#hallway2{
+		width:10px;
+		height:200px;
+		background-color:green;
+		z-index:10;
+		top:0px;
+		left:0px;
+		transform:rotate(0deg);
+		opacity:0;
+		position:absolute;
+	}
+
+	#hallway3{
+		width:200px;
+		height:10px;
+		background-color:green;
+		z-index:10;
+		top:0px;
+		left:0px;
+		transform:rotate(0deg);
+		opacity:0;
+		position:absolute;
+	}
+
+	#hallway4{
+		width:600px;
+		height:10px;
+		background-color:green;
+		z-index:10;
+		top:0px;
+		left:0px;
+		transform:rotate(45deg);
+		opacity:0;
+		position:absolute;
+	}
+
+	#endDiv{
+		width:100px;
+		height:100px;
+		background-color:green;
+		z-index:10;
+		top:600px;
+		left:800px;
+		opacity:0;
+		position:absolute;
+	}
+
+	#goofy{
+		width:100%;
+		height:100%;
+		background-image:url(https://i.scdn.co/image/ab6761610000e5ebdf3a8706ed65e617d97f62a4);
+		background-size:contain;
+		background-repeat:repeat;
+		z-index:-20;
+		opacity:0;
+		position:absolute;
+	}
+
+</style>
+</head>
+<body>
+<div id="startDiv">
+	<p style="color:white">Click to begin</p>
+</div>
+<div id="bigDiv"></div>
+<div id="hallway1"></div>
+<div id="hallway2"></div>
+<div id="hallway3"></div>
+<div id="hallway4"></div>
+<div id="goofy"></div>
+<div id="endDiv"></div>
+
+	<script type="text/javascript">
+		
+
+		startDiv.addEventListener("click", function(){
+			let messup = 0
+			console.log("you have begun")
+			endDiv.style.opacity = "1";
+			hallway1.style.opacity = "1";
+			hallway1.style.top = "45px";
+			hallway1.style.left = "100px";
+			hallway2.style.opacity = "1";
+			hallway2.style.top = "45px";
+			hallway2.style.left = "200px";
+			hallway3.style.opacity = "1";
+			hallway3.style.top = "245px";
+			hallway3.style.left = "200px";
+			hallway4.style.opacity = "1";
+			hallway4.style.top = "455px";
+			hallway4.style.left = "309px";
+			bigDiv.addEventListener("mouseenter", function(){
+				console.log("death occurs")
+				goofy.style.opacity = "1";
+				goofy.style.zIndex = "11";
+			})
+		})
+	</script>
+</body>
+</html>
