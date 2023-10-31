@@ -111,6 +111,7 @@
 <div id="hallway4"></div>
 <div id="goofy"></div>
 <div id="endDiv"></div>
+<audio src="goofy.mp3" id="sound"></audio>
 
 	<script type="text/javascript">
 		
@@ -135,6 +136,8 @@
 				console.log("death occurs")
 				goofy.style.opacity = "1";
 				goofy.style.zIndex = "11";
+				sound.play();
+
 			})
 		})
 	</script>
