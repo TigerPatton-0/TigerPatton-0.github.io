@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		#tree{
+			height:626px;
+			width:459px;
+			background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp3ky5v95wTsWJ3xe7FIlUr6Q_WuFC2wH2rw&usqp=CAU);
+			position:absolute;
+			background-repeat:no-repeat;
+			background-size:contain;
+			top:100px;
+			left:500px;
+			z-index:1;
+
+		}
+		#decoration1{
+			background-color:red;
+			width:50px;
+			height:50px;
+			top:460px;
+			left:820px;
+		}
+		.ball{
+			border-radius:50%;
+			position:absolute;
+			background-repeat:no-repeat;
+			z-index:10;
+		}
+
+
+
+
+	</style>
+</head>
+<body>
+<div class="ball"></div>
+<div id="decoration1" class="ball"></div>
+<div id="tree"></div>
+
+	<script type="text/javascript">
+		decoration1.addEventListener("click", function(){
+			console.log("it actually works");
+			
+		})
+	</script>
+
+</body>
+</html>

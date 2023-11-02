@@ -33,8 +33,8 @@
 		height:10px;
 		background-color:green;
 		z-index:10;
-		top:0px;
-		left:0px;
+		top:45px;
+		left:100px;
 		transform:rotate(0deg);
 		opacity:0;
 		position:absolute;
@@ -45,8 +45,8 @@
 		height:200px;
 		background-color:green;
 		z-index:10;
-		top:0px;
-		left:0px;
+		top:45px;
+		left:200px;
 		transform:rotate(0deg);
 		opacity:0;
 		position:absolute;
@@ -57,16 +57,16 @@
 		height:10px;
 		background-color:green;
 		z-index:10;
-		top:0px;
-		left:0px;
+		top:245px;
+		left:200px;
 		transform:rotate(0deg);
 		opacity:0;
 		position:absolute;
 	}
 
 	#hallway4{
-		width:600px;
-		height:10px;
+		width:455px;
+		height:309px;
 		background-color:green;
 		z-index:10;
 		top:0px;
@@ -117,23 +117,14 @@
 		
 
 		startDiv.addEventListener("click", function(){
-			let messup = 0
-			console.log("you have begun")
+			console.log("you have begun");
 			endDiv.style.opacity = "1";
 			hallway1.style.opacity = "1";
-			hallway1.style.top = "45px";
-			hallway1.style.left = "100px";
 			hallway2.style.opacity = "1";
-			hallway2.style.top = "45px";
-			hallway2.style.left = "200px";
 			hallway3.style.opacity = "1";
-			hallway3.style.top = "245px";
-			hallway3.style.left = "200px";
 			hallway4.style.opacity = "1";
-			hallway4.style.top = "455px";
-			hallway4.style.left = "309px";
 			bigDiv.addEventListener("mouseenter", function(){
-				console.log("death occurs")
+				console.log("death occurs");
 				goofy.style.opacity = "1";
 				goofy.style.zIndex = "11";
 				sound.play();
