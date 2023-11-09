@@ -8,8 +8,10 @@
 	<style type="text/css">
 		#circle{
 			border-radius:50%;
-			width:60px;
-			height:60px;
+			width:100px;
+			height:100px;
+			top:50%;
+			left:200px;
 			background-color:green;
 			z-index:5;
 			position:absolute;
@@ -20,34 +22,45 @@
 			width:80px;
 			height:30px;
 			background-color:grey;
+			top:10px;
+			left:530px;
 			z-index:1;
 			position:absolute;
 			background-repeat:no-repeat;
 		}
+		#rightborder{
+			width:20px;
+			height:100%;
+			left:500px;
+		}
+		.border{
+			position:absolute;
+			background-color:grey;
+			background-repeat:no-repeat;
+			z-index:1;
+		}
 
 	</style>
-
 
 </head>
 <body>
 
 <div id="circle"></div>
 <div id="scorekeeper"></div>
+<div id="rightborder" class="border"></div>
 
 	<script type="text/javascript">
 		var score = 0;
 		circle.addEventListener("click", function(){
-			var x = Math.random() * 100;
-			var y = Math.random() * 100;
+			var x = Math.random() * 380;
+			var y = Math.random() * 80;
 			score = score + 1
 			console.log(score);
-			circle.style.top = y+"%"
-			circle.style.left = x+"%"
+			circle.style.left = x+20+"px"
+			circle.style.top = y+10+"%"
 		})
-
 
 	</script>
 
-<p style="color:white, top:20px, z-index:2">Score: 102934869</p>
 </body>
 </html>
