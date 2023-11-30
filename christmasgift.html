@@ -20,16 +20,49 @@
 		}
 		#decoration1{
 			background-color:red;
-			width:50px;
-			height:50px;
 			top:460px;
 			left:820px;
+			transition:2s;
+			color:white;
+		}
+		#decoration2{
+			background-color:lawngreen;
+			top:490px;
+			left:715px;
+			transition:2s;
+			color:blue;
+		}
+		#decoration3{
+			background-color:ghostwhite;
+			
+			top:420px;
+			left:640px;
+			transition:2s;
+		}
+		#decoration4{
+			background-color:red;
+			
+			top:280px;
+			left:600px;
+			transition:2s;
+		}
+		#decoration5{
+			background-color:cyan;
+			top:180px;
+			left:740px;
+			transition:2s;
 		}
 		.ball{
+			width:50px;
+			height:50px;
 			border-radius:50%;
 			position:absolute;
 			background-repeat:no-repeat;
 			z-index:10;
+			opacity:1;
+			text-align:center;
+			vertical-align:center;
+			font-family:courier;
 		}
 
 
@@ -40,14 +73,97 @@
 <body>
 <div class="ball"></div>
 <div id="decoration1" class="ball"></div>
+<div id="decoration2" class="ball"></div>
+<div id="decoration3" class="ball"></div>
+<div id="decoration4" class="ball"></div>
+<div id="decoration5" class="ball"></div>
 <div id="tree"></div>
 
 	<script type="text/javascript">
-		decoration1.addEventListener("click", function(){
+		decoration1.addEventListener("mouseenter", function(){
 			console.log("it actually works");
-			
+			decoration1.style.left = "770px";
+			decoration1.style.width = "100px";
+			decoration1.style.top = "430px";
+			decoration1.style.height = "100px";
+			decoration1.style.padding = "50px";
+			decoration1.innerText = "MERRY CHRISTMAS DAD";
+			decoration1.addEventListener("mouseleave", function(){
+				console.log("it actually works 2");
+				decoration1.style.width = "50px";
+				decoration1.style.height = "50px";
+				decoration1.style.top = "460px";
+				decoration1.style.left = "820px";
+				decoration1.style.padding = "0px";
+				decoration1.innerText = "";
+			})
+		})
+		decoration2.addEventListener("mouseenter", function(){
+			console.log("it actually works");
+			decoration2.style.left = "665px";
+			decoration2.style.width = "140px";
+			decoration2.style.top = "440px";
+			decoration2.style.height = "140px";
+			decoration2.style.padding = "10px";
+			decoration2.innerText = "I love playing  tennis and soccer with you in Central Park, and squash at the Yale club";
+			decoration2.addEventListener("mouseleave", function(){
+				console.log("it actually works 2");
+				decoration2.style.width = "50px";
+				decoration2.style.height = "50px";
+				decoration2.style.top = "490px";
+				decoration2.style.left = "715px";
+				decoration2.style.padding = "0px";
+				decoration2.innerText = "";
+			})
+		})
+		decoration3.addEventListener("mouseenter", function(){
+			console.log("it actually works");
+			decoration3.style.left = "590px";
+			decoration3.style.width = "150px";
+			decoration3.style.top = "370px";
+			decoration3.style.height = "150px";
+			decoration3.innerText = "You're kinda funny";
+			decoration3.addEventListener("mouseleave", function(){
+				console.log("it actually works 2");
+				decoration3.style.width = "50px";
+				decoration3.style.height = "50px";
+				decoration3.style.top = "420px";
+				decoration3.style.left = "640px";
+				decoration3.innerText = "";
+	
+			})
+		})
+		decoration4.addEventListener("mouseenter", function(){
+			console.log("it actually works");
+			decoration4.style.left = "550px";
+			decoration4.style.width = "150px";
+			decoration4.style.top = "230px";
+			decoration4.style.height = "150px";
+			decoration4.addEventListener("mouseleave", function(){
+				console.log("it actually works 2");
+				decoration4.style.width = "50px";
+				decoration4.style.height = "50px";
+				decoration4.style.top = "280px";
+				decoration4.style.left = "600px";
+		
+			})
+		})
+		decoration5.addEventListener("mouseenter", function(){
+			console.log("it actually works");
+			decoration5.style.left = "690px";
+			decoration5.style.width = "150px";
+			decoration5.style.top = "130px";
+			decoration5.style.height = "150px";
+			decoration5.addEventListener("mouseleave", function(){
+				console.log("it actually works 2");
+				decoration5.style.width = "50px";
+				decoration5.style.height = "50px";
+				decoration5.style.top = "180px";
+				decoration5.style.left = "740px";
+		
+			})
 		})
 	</script>
-
+<p id="message1">e</p>
 </body>
 </html>
