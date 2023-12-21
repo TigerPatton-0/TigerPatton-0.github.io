@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+	.crab{
+		height:100px;
+		width:100px;
+		background-color:blue;
+		display:inline-block;
+		margin:5px;
+	}
+</style>
+
+</head>
+<body>
+	<script type="text/javascript">
+		var count = 0
+		function funct(){
+			var e = document.createElement("div");
+			e.classList.add("crab");
+			document.body.appendChild(e);
+			count = count + 1
+		}
+
+for (var count2 = 0; count2 < 1000; count2 = count2 + 1){
+	funct()
+}
+	</script>
+
+</body>
+</html>

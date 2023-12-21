@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<style type="text/css">
+	#red{
+		background-image:url(redornament.png);
+	}
+	#green{
+		background-image:url(greenornament.png);
+	}
+	.styling{
+		width:80px;
+		height:80px;
+		z-index:2;
+		background-size:contain;
+		background-repeat:no-repeat;
+		display:inline-block;
+	}
+	#tree{
+		width:500px;
+		height:500px;
+		z-index:-2;
+		background-image:url(https://wintergreencorp.com/Assets/img/trees/8033/white.jpg);
+		background-size:contain;
+		background-repeat:no-repeat;
+	}
+</style>
+<body>
+
+<div id="tree"></div>
+<div id="red" class="styling"></div>
+<div id="green" class="styling"></div>
+
+	<script type="text/javascript">
+		var decoration;
+
+		function makeOrnament(){
+		var ornament = document.createElement("div")
+		document.body.appendChild(ornament)
+		ornament.style.position = "absolute"
+		ornament.style.top = event.clientY-70+"px"
+		ornament.style.left = event.clientX-40+"px"
+		}
+
+		tree.addEventListener("mousemove", function(event){
+			console.log(event)
+		})
+
+		red.addEventListener("click", function(){
+			decoration = "redornament.png"
+		})
+
+		green.addEventListener("click", function(){
+			decoration = "greenornament.png"
+		})
+	</script>
+
+</body>
+</html>
