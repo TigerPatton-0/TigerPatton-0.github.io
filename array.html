@@ -12,7 +12,7 @@
 			document.body.appendChild(object);
 			object.style.width = "40px";
 			object.style.height = "40px";
-			object.style.backgroundColor = "gray";
+			object.style.backgroundColor = "red";
 			object.style.borderRadius = "20%";
 			object.style.display = "inline-block"
 			object.style.margin = "5px";
@@ -20,9 +20,18 @@
 			object.style.id = "square" + number;
 			object.style.backgroundSize = "contain";
 			object.addEventListener("click", function(){
-				object.style.backgroundColor = "black"
+				object.style.backgroundColor = "orange"
 				object.addEventListener("click", function(){
-					object.style.backgroundColor = "blue"
+					object.style.backgroundColor = "gold"
+					object.addEventListener("click", function(){
+						object.style.backgroundColor = "green"
+						object.addEventListener("click", function(){
+							object.style.backgroundColor = "blue"
+							object.addEventListener("click", function(){
+								object.style.backgroundColor = "black"
+							})
+						})
+					})
 				})
 			})
 		}
