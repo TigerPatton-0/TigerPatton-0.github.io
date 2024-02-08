@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<style type="text/css">
+		#machine{
+			width:307px;
+			height:480px;
+			background-image:url("https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/1539638/gumball-machine-clipart-xl.png");
+			position:absolute;
+			top:200px;
+			left:500px;
+			background-size:contain;
+			z-index:1;
+		}
+		#clickplace{
+			height:40px;
+			width:40px;
+			background-color:lawngreen;
+			border-radius:50%;
+			position:absolute;
+			top:475px;
+			left:633px;
+			opacity:1;
+			z-index:2;
+		}
+		#ball{
+			height:0px;
+			width:0px;
+			background-color:blue;
+			border-radius:50%;
+			position:absolute;
+			top:600px;
+			left:652px;
+			opacity:1;
+			z-index:4;
+			transition:2s;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="machine"></div>
+	<div id="ball"></div>
+	<div id="clickplace"></div>
+
+	<script type="text/javascript">
+		var colors = ["blue", "pink", "red", "teal", "lime", "orange", "magenta"]
+		var messages = ["you're frienly", "you're probably a nice person", "have a lovely day", "you're dogwater", "just kidding", "you thought i was telling the truth...", "because you actually are dogwater!", "gahhahahahaaha...", "hahhahaha...", "haha...", "ha...", "ha.", "but really...", "you're dead"]
+		if(ball.style.height == "0px"){
+			clickplace.addEventListener("click", function(){
+			console.log("ayo")
+			var randomcolor = colors[Math.floor(Math.random()*7)]
+			ball.style.opacity = "1";
+			ball.style.height = "100px";
+			ball.style.width = "100px";
+			ball.style.top = "550px";
+			ball.style.left = "602px";
+			ball.style.backgroundColor = randomcolor;
+		})
+		if(ball.style.height == "100px"){
+			clickplace.addEventListener("click", function(){
+			console.log("part two working")
+			ball.style.opacity = "0";
+			ball.style.height = "100px";
+			ball.style.width = "100px";
+			ball.style.top = "550px";
+			ball.style.left = "602px";
+		})
+	</script>
+
+</body>
+</html>

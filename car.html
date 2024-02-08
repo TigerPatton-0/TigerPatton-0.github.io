@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		.road{
+			width:100%;
+			height:800px;
+			background-size:contain;
+			background-repeat:no-repeat;
+			display:inline-block;
+			z-index:2;
+		}
+		#daytime{
+			background-image:url(dayroad.png);
+			opacity:1;
+		}
+		#nighttime{
+			background-image:url(night.png);
+			opacity:0
+		}
+		#black{
+			width:100%;
+			height:1000px;
+			background-color:black;
+			background-size:contain;
+			opacity:0;
+		}
+		#car{
+			width:465px;
+			height:225px;
+			position:absolute;
+			top:450px;
+			left:0px;
+			background-image:url("https://i.pinimg.com/originals/dc/19/e9/dc19e9b94a372ebc21ffeb7623d5632a.png");
+			background-size:contain;
+			opacity:1;
+			z-index:5;
+		}
+		#bomb{
+			width:211px;
+			height:230px;
+			position:absolute;
+			top:0px;
+			left:650px;
+			background-image:url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6c9eb347-7d8a-4eee-9480-b8cd35d08a2d/dfr7zb9-e9392fea-285e-426e-867b-1b5cf338bc69.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzZjOWViMzQ3LTdkOGEtNGVlZS05NDgwLWI4Y2QzNWQwOGEyZFwvZGZyN3piOS1lOTM5MmZlYS0yODVlLTQyNmUtODY3Yi0xYjVjZjMzOGJjNjkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.AxVR7NCd0sZtjBJDeDs0NWDSS1ptM0DEkx5dEyACW4E");
+			background-size:contain;
+			opacity:0;
+			z-index:7;
+		}
+
+	</style>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var x = 0
+		document.addEventListener("keydown", function(input){
+			console.log(x)
+			if(x<=0){
+				x = x+15
+			}
+			if(x>=555){
+				x = 555
+				bomb.style.opacity="1";
+			}
+			if(input.key=="ArrowLeft"){
+				x = x-15
+				car.style.left=x+"px";
+			}
+			if(input.key=="ArrowRight"){
+				x = x+15
+				car.style.left=x+"px";
+			}
+		})
+	</script>
+
+	<div id="car"></div>
+	<div id="daytime" class="road"></div>
+	<div id="nighttime" class="road"></div>
+	<div id="black"></div>
+	<div id="bomb"></div>
+
+</body>
+</html>
