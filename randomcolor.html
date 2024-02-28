@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<style type="text/css">
+		#shape{
+			height:300px;
+			width:300px;
+			color:rgb(100, 100, 100);
+			background-repeat:no-repeat;
+			position:absolute;
+			top:200px;
+			left:500px;
+		}
+
+
+	</style>
+</head>
+<body>
+
+<!-- steps:
+1: make a function for when you click
+2: make three random number generators like math.floor(math.random()*255)
+3: make a square with rgb but the r and the g and the b are each random numbers
+-->
+<div id="shape"></div>
+	<script type="text/javascript">
+		var red = Math.floor(Math.random()*255);
+		var green = Math.floor(Math.random()*255);
+		var blue = Math.floor(Math.random()*255);
+		shape.addEventListener("click", function(){
+			shape.style.color = "rgb(" + red + ", " + green + ", " + blue + ")"
+		})
+	</script>
+
+</body>
+</html>
