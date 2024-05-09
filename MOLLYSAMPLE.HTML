@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		#ball{
+			width:100px;
+			height:100px;
+			background-color:red;
+			position:absolute;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="ball"></div>
+
+
+<script type="text/javascript">
+
+var ballY;
+
+function spin (){
+	ball.style.transform="rotate(360deg)"
+	ball.style.transition="1s"
+
+}
+
+function setTop (){
+	ball.style.top = Math.random()*1000+"px"
+	ballY = ball.offsetTop
+	if (ballY> 500){
+			alert("whattup")
+			spin()
+		}
+
+
+}
+setTop()
+
+	console.log(ballY)
+	
+	// function check (){
+	// }// setInterval(check,100)
+</script>
+</body>
+</html>
