@@ -4,7 +4,7 @@
 	<style type="text/css">
 		#background{
 			width:100%;
-			height:1000px;
+			height:900px;
 			background-color:white;
 			z-index:5;
 		}
@@ -41,8 +41,8 @@
 			border-width:2px;
 			border-style:solid;
 			border-color:black;
-			top:440px;
-			left:365px;
+			top:439px;
+			left:364px;
 			z-index:30;
 			transition:2s;
 		}
@@ -69,53 +69,62 @@
 <div id="background"></div>
 
 	<script type="text/javascript">
-		var x = 0;
-		var y = 0;
-		var xend;
-		var yend;
+		var endleft;
+		var endtop;
+		var balltop;
+		var ballbottom;
+		var ballleft;
+		var ballright;
 		var divBall = document.getElementById("ball");
-		var yball = divBall.offsetTop + 10;
-		var xball = divBall.offsetLeft + 10;
-
+		var xball = divBall.offsetLeft + 9;
+		var yball = divBall.offsetTop + 9;
+		function setend(){
+			endtop = ball.style.top + 9;
+			endleft = ball.style.left + 9;
+		}
 		ball.addEventListener("mousedown", function(){
 			console.log("X Coordinate: " + xball);
 			console.log("Y Coordinate: " + yball);
 			board.addEventListener("mouseup", function(){
-				ball.style.left = divBall.offsetLeft + 10 - (event.clientX-divBall.offsetLeft) * 2 + "px";
-				ball.style.top = divBall.offsetTop + 10 - (event.clientY-divBall.offsetTop) * 2 + "px";
-
-				xball = divBall.offsetLeft + 10;
-				yball = divBall.offsetTop + 10;
+				ball.style.left = divBall.offsetLeft + 9 - (event.clientX-divBall.offsetLeft) * 2 + "px";
+				ball.style.top = divBall.offsetTop + 9 - (event.clientY-divBall.offsetTop) * 2 + "px";
+				setend();
 			})
 			background.addEventListener("mouseup", function(){
-				ball.style.left = divBall.offsetLeft + 10 - (event.clientX-divBall.offsetLeft) * 2 + "px";
-				ball.style.top = divBall.offsetTop + 10 - (event.clientY-divBall.offsetTop) * 2 + "px";
-
-				xball = divBall.offsetLeft + 10;
-				yball = divBall.offsetTop + 10;
+				ball.style.left = divBall.offsetLeft + 9 - (event.clientX-divBall.offsetLeft) * 2 + "px";
+				ball.style.top = divBall.offsetTop + 9 - (event.clientY-divBall.offsetTop) * 2 + "px";
+				setend();
 			})
 		})
 
-		function check (x, y){
-			if(x <= 310){
-				console.log("left");
-			}
-			if(x >= 1090){
-				console.log("right");
-			}
-			if(y <= 210){
-				console.log("top");
-			}
-			if(y >= 690){
-				console.log("bottom");
-			}
+		function sides(){
+			ballleft = parseFloat(divBall.offsetLeft);
+			balltop = parseFloat(divBall.offsetTop);
+			ballright = ballleft + divBall.offsetWidth;
+			ballbottom = balltop + divBall.offsetHeight;
 		}
 
-		function check2(){
-			check(xball, yball)
+		function check(){
+			if(ballleft <= 300){
+				console.log("left")
+				ball.style.left = 300 + Math.abs(endleft-300);
+			}
+			if(balltop <= 200){
+				console.log("top")
+				ball.style.top = 200 + Math.abs(endtop-200);
+			}
+			if(ballright >= 1100){
+				console.log("right")
+				ball.style.left = 1100 - Math.abs(endleft-1100);
+			}
+			if(ballbottom >= 700){
+				console.log("bottom")
+				ball.style.top = 700 - Math.abs(endtop-700);
+			}
 		}
 		
-		setInterval(check2, 100);
+		setInterval(check, 10);
+		setInterval(sides, 10);
 
 
 	</script>
