@@ -34,7 +34,7 @@
 		#ball{
 			width:18px;
 			height:18px;
-			border-radius:0%;
+			border-radius:50%;
 			background-color:whitesmoke;
 			background-repeat:no-repeat;
 			position:absolute;
@@ -75,24 +75,29 @@
 		var ballbottom;
 		var ballleft;
 		var ballright;
+		var strokes = 0;
 		var divBall = document.getElementById("ball");
 		var xball = divBall.offsetLeft + 9;
 		var yball = divBall.offsetTop + 9;
 		function setend(){
-			endtop = ball.style.top + 9;
-			endleft = ball.style.left + 9;
+			endtop = parseInt(ball.style.top) + 9;
+			endleft = parseInt(ball.style.left) + 9;
 		}
 		ball.addEventListener("mousedown", function(){
+			xball = divBall.offsetLeft + 9;
+			yball = divBall.offsetTop + 9;
 			console.log("X Coordinate: " + xball);
 			console.log("Y Coordinate: " + yball);
 			board.addEventListener("mouseup", function(){
 				ball.style.left = divBall.offsetLeft + 9 - (event.clientX-divBall.offsetLeft) * 2 + "px";
 				ball.style.top = divBall.offsetTop + 9 - (event.clientY-divBall.offsetTop) * 2 + "px";
+				strokes = strokes + 1;
 				setend();
 			})
 			background.addEventListener("mouseup", function(){
 				ball.style.left = divBall.offsetLeft + 9 - (event.clientX-divBall.offsetLeft) * 2 + "px";
 				ball.style.top = divBall.offsetTop + 9 - (event.clientY-divBall.offsetTop) * 2 + "px";
+				strokes = strokes + 1;
 				setend();
 			})
 		})
@@ -107,25 +112,45 @@
 		function check(){
 			if(ballleft <= 300){
 				console.log("left")
-				ball.style.left = 300 + Math.abs(endleft-300);
+				ball.style.left = 600 - parseInt(endleft) + "px";
+				console.log(endleft)
 			}
 			if(balltop <= 200){
 				console.log("top")
-				ball.style.top = 200 + Math.abs(endtop-200);
+				ball.style.top = 400 - parseInt(endtop) + "px";
 			}
 			if(ballright >= 1100){
 				console.log("right")
-				ball.style.left = 1100 - Math.abs(endleft-1100);
+				ball.style.left = 2200 - parseInt(endleft) + "px";
 			}
 			if(ballbottom >= 700){
 				console.log("bottom")
-				ball.style.top = 700 - Math.abs(endtop-700);
+				ball.style.top = 1400 - parseInt(endtop) + "px";
 			}
 		}
-		
+
+		function wincheck(){
+			if(ballleft >= 985 && ballleft <= 1015 && balltop >= 420 && balltop <= 450){
+				ball.style.left = "1009px";
+				ball.style.top = "444px";
+				ball.style.width = "8px";
+				ball.style.height = "8px";
+				setTimeout(win,2000)
+			}
+		}
+		function win(){
+			if(strokes > 0 && strokes <=3){
+				alert("Hole in " + strokes + "? Thats pretty impressive!");
+				strokes = 0;
+			}
+			if(strokes > 3){
+				alert(strokes + " shots? You need some work...")
+				strokes = 0;
+			}
+		}
 		setInterval(check, 10);
 		setInterval(sides, 10);
-
+		setInterval(wincheck, 10);
 
 	</script>
 
